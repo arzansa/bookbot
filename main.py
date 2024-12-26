@@ -22,16 +22,14 @@ def createReport(src):
         file_contents = f.read()
         print(f"===== Analyzing document {src} =====") 
         print(f"Word count: {countWords(file_contents)}")
-        # print(f"Character count: {countCharacters(file_contents)}")
-        # reportCharacters(sorted(countCharacters(file_contents).values()))
-        reportCharacters(countCharacters(file_contents))
+        counted_chars = countCharacters(file_contents)
+        chars_sorted_by_freq = dict(sorted(counted_chars.items(), key=lambda item: item[1], reverse=True))
+        reportCharacters(chars_sorted_by_freq)
+        print("===== End of report =====")
 
 def reportCharacters(charDict):
-    print(charDict)
     for c in charDict:
-        # print(c)
-        # print(type(c))
-        # if str(charDict[c]).isalpha():
-        print(f"The character {c} was found {charDict[c]} times")
+        if str(c).isalpha():
+            print(f"The character '{c}' was found {charDict[c]} times")
 
 main()
