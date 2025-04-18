@@ -1,7 +1,6 @@
 ### BookBot
 
-BookBot is the first project in the [Boot.dev](https://www.boot.dev/) curriculum:
-https://www.boot.dev/courses/build-bookbot-python
+BookBot is my first [Boot.dev](https://www.boot.dev) project!
 
 This program requires Python3 to be installed locally.
 
